@@ -11,6 +11,9 @@ from .rsi import RSIStrategy
 from .ma import MAStrategy
 from .volume import VolumeStrategy
 from .macd import MACDStrategy
+from .bollinger import BollingerStrategy
+from .kdj import KDJStrategy
+from .cci import CCIStrategy
 
 
 class StrategyFactory:
@@ -24,6 +27,9 @@ class StrategyFactory:
         'ma': MAStrategy,
         'volume': VolumeStrategy,
         'macd': MACDStrategy,
+        'bollinger': BollingerStrategy,
+        'kdj': KDJStrategy,
+        'cci': CCIStrategy,
     }
     
     @classmethod
@@ -166,8 +172,10 @@ def create_hybrid(strategy_names: List[str], params: Dict = None) -> HybridStrat
 PRESETS = {
     '激进': ['momentum', 'breakout', 'volume'],  # 高风险高收益
     '稳健': ['ma', 'rsi', 'macd'],  # 低频稳定
-    '平衡': ['momentum', 'ma', 'rsi', 'volume'],  # 平衡
-    '全部': ['momentum', 'breakout', 'rsi', 'ma', 'volume', 'macd'],  # 全策略
+    '平衡': ['momentum', 'rsi', 'volume', 'bollinger'],  # 平衡
+    '短线': ['rsi', 'kdj', 'cci'],  # 短线超买超卖
+    '趋势': ['macd', 'bollinger', 'volume'],  # 趋势跟踪
+    '全部': ['momentum', 'breakout', 'rsi', 'ma', 'volume', 'macd', 'bollinger', 'kdj', 'cci'],  # 全策略
 }
 
 

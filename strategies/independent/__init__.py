@@ -11,6 +11,9 @@ from .rsi import RSIStrategy
 from .ma import MAStrategy
 from .volume import VolumeStrategy
 from .macd import MACDStrategy
+from .bollinger import BollingerStrategy
+from .kdj import KDJStrategy
+from .cci import CCIStrategy
 
 __all__ = [
     'BaseStrategy',
@@ -26,4 +29,7 @@ __all__ = [
     'MAStrategy',
     'VolumeStrategy',
     'MACDStrategy',
+    'BollingerStrategy',
+    'KDJStrategy',
+    'CCIStrategy',
 ]
