@@ -19,6 +19,11 @@ from .dma import DMAStrategy
 from .trix import TRIXStrategy
 from .wr import WRStrategy
 from .obv import OBVStrategy
+from .limit_up import LimitUpStrategy
+from .chase_up import ChaseUpStrategy
+from .n_pattern import NPatternStrategy
+from .money_flow import MoneyFlowStrategy
+from .ma_divergence import MaDivergenceStrategy
 
 __all__ = [
     'BaseStrategy',
@@ -42,4 +47,9 @@ __all__ = [
     'TRIXStrategy',
     'WRStrategy',
     'OBVStrategy',
+    'LimitUpStrategy',
+    'ChaseUpStrategy',
+    'NPatternStrategy',
+    'MoneyFlowStrategy',
+    'MaDivergenceStrategy',
 ]

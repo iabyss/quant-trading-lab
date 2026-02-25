@@ -19,6 +19,11 @@ from .dma import DMAStrategy
 from .trix import TRIXStrategy
 from .wr import WRStrategy
 from .obv import OBVStrategy
+from .limit_up import LimitUpStrategy
+from .chase_up import ChaseUpStrategy
+from .n_pattern import NPatternStrategy
+from .money_flow import MoneyFlowStrategy
+from .ma_divergence import MaDivergenceStrategy
 
 
 class StrategyFactory:
@@ -40,6 +45,11 @@ class StrategyFactory:
         'trix': TRIXStrategy,
         'wr': WRStrategy,
         'obv': OBVStrategy,
+        'limit_up': LimitUpStrategy,
+        'chase_up': ChaseUpStrategy,
+        'n_pattern': NPatternStrategy,
+        'money_flow': MoneyFlowStrategy,
+        'ma_divergence': MaDivergenceStrategy,
     }
     
     @classmethod
@@ -186,7 +196,10 @@ PRESETS = {
     '短线': ['rsi', 'kdj', 'cci', 'wr'],  # 短线超买超卖
     '趋势': ['macd', 'bollinger', 'volume', 'atr'],  # 趋势跟踪
     '能量': ['obv', 'volume', 'macd'],  # 能量潮
-    '全部': ['momentum', 'breakout', 'rsi', 'ma', 'volume', 'macd', 'bollinger', 'kdj', 'cci', 'atr', 'dma', 'trix', 'wr', 'obv'],
+    '打板': ['limit_up', 'chase_up', 'volume'],  # 追涨停
+    '追涨': ['chase_up', 'ma_divergence', 'money_flow'],  # 追涨策略
+    '反包': ['n_pattern', 'chase_up', 'rsi'],  # N字反包
+    '全部': ['momentum', 'breakout', 'rsi', 'ma', 'volume', 'macd', 'bollinger', 'kdj', 'cci', 'atr', 'dma', 'trix', 'wr', 'obv', 'limit_up', 'chase_up', 'n_pattern', 'money_flow', 'ma_divergence'],
 }
 
 
