@@ -14,6 +14,11 @@ from .macd import MACDStrategy
 from .bollinger import BollingerStrategy
 from .kdj import KDJStrategy
 from .cci import CCIStrategy
+from .atr import ATRStrategy
+from .dma import DMAStrategy
+from .trix import TRIXStrategy
+from .wr import WRStrategy
+from .obv import OBVStrategy
 
 
 class StrategyFactory:
@@ -30,6 +35,11 @@ class StrategyFactory:
         'bollinger': BollingerStrategy,
         'kdj': KDJStrategy,
         'cci': CCIStrategy,
+        'atr': ATRStrategy,
+        'dma': DMAStrategy,
+        'trix': TRIXStrategy,
+        'wr': WRStrategy,
+        'obv': OBVStrategy,
     }
     
     @classmethod
@@ -173,9 +183,10 @@ PRESETS = {
     '激进': ['momentum', 'breakout', 'volume'],  # 高风险高收益
     '稳健': ['ma', 'rsi', 'macd'],  # 低频稳定
     '平衡': ['momentum', 'rsi', 'volume', 'bollinger'],  # 平衡
-    '短线': ['rsi', 'kdj', 'cci'],  # 短线超买超卖
-    '趋势': ['macd', 'bollinger', 'volume'],  # 趋势跟踪
-    '全部': ['momentum', 'breakout', 'rsi', 'ma', 'volume', 'macd', 'bollinger', 'kdj', 'cci'],  # 全策略
+    '短线': ['rsi', 'kdj', 'cci', 'wr'],  # 短线超买超卖
+    '趋势': ['macd', 'bollinger', 'volume', 'atr'],  # 趋势跟踪
+    '能量': ['obv', 'volume', 'macd'],  # 能量潮
+    '全部': ['momentum', 'breakout', 'rsi', 'ma', 'volume', 'macd', 'bollinger', 'kdj', 'cci', 'atr', 'dma', 'trix', 'wr', 'obv'],
 }
 
 

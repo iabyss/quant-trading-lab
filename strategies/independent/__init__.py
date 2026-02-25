@@ -14,6 +14,11 @@ from .macd import MACDStrategy
 from .bollinger import BollingerStrategy
 from .kdj import KDJStrategy
 from .cci import CCIStrategy
+from .atr import ATRStrategy
+from .dma import DMAStrategy
+from .trix import TRIXStrategy
+from .wr import WRStrategy
+from .obv import OBVStrategy
 
 __all__ = [
     'BaseStrategy',
@@ -32,4 +37,9 @@ __all__ = [
     'BollingerStrategy',
     'KDJStrategy',
     'CCIStrategy',
+    'ATRStrategy',
+    'DMAStrategy',
+    'TRIXStrategy',
+    'WRStrategy',
+    'OBVStrategy',
 ]
