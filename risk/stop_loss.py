@@ -138,9 +138,7 @@ class StopLossManager:
                 return True
 
 
-class False
-        
-        return RiskMonitor:
+class RiskMonitor:
     """风险监控"""
     
     def __init__(self, max_drawdown: float = 0.15, max_position_pct: float = 0.3):
